@@ -1,0 +1,452 @@
+--Create TABLE UNICODE_VALUES
+create table UNICODE_VALUES ( sample VARCHAR2(5),
+                                   value  VARCHAR2(5))
+
+--Insert the following Values
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('؛', '061B');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('؟', '061F');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('ء', '0621');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('آ', '0622');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('أ', '0623');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('ؤ', '0624');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('،', '060C');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('إ', '0625');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('ئ', '0626');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('ا', '0627');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('ب', '0628');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('ة', '0629');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('ت', '062A');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('ث', '062B');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('ج', '062C');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('ح', '062D');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('خ', '062E');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('د', '062F');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('ذ', '0630');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('ر', '0631');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('ز', '0632');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('س', '0633');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('ش', '0634');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('ص', '0635');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('ض', '0636');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('ط', '0637');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('ظ', '0638');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('ع', '0639');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('غ', '063A');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('ف', '0641');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('ق', '0642');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('ك', '0643');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('ل', '0644');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('م', '0645');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('ن', '0646');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('ه', '0647');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('و', '0648');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('ى', '0649');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('ي', '064A');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('ـ', '0640');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('ً', '064B');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('ٌ', '064C');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('#', '0023');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('$', '0024');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('%', '0025');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('&', '0026');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('''', '0027');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('(', '0028');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values (')', '0029');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('*', '002A');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('+', '002B');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values (',', '002C');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('-', '002D');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('.', '002E');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('/', '002F');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('0', '0030');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('1', '0031');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('2', '0032');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('3', '0033');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('4', '0034');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('5', '0035');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('6', '0036');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('7', '0037');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('8', '0038');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('9', '0039');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values (':', '003A');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values (';', '003B');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('<', '003C');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('=', '003D');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('>', '003E');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('?', '003F');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('@', '0040');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('A', '0041');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('B', '0042');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('C', '0043');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('D', '0044');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('E', '0045');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('F', '0046');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('G', '0047');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('H', '0048');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('I', '0049');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('J', '004A');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('K', '004B');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('L', '004C');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('M', '004D');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('N', '004E');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('O', '004F');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('P', '0050');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('Q', '0051');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('R', '0052');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('S', '0053');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('T', '0054');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('U', '0055');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('V', '0056');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('W', '0057');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('X', '0058');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('Y', '0059');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('Z', '005A');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('[', '005B');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('\', '005C');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values (']', '005D');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('^', '005E');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('_', '005F');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('''', '0060');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('a', '0061');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('b', '0062');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('c', '0063');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('d', '0064');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('e', '0065');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('f', '0066');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('g', '0067');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('h', '0068');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('i', '0069');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('j', '006A');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('k', '006B');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('l', '006C');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('m', '006D');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('n', '006E');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('o', '006F');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('p', '0070');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('q', '0071');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('r', '0072');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('s', '0073');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('t', '0074');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('u', '0075');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('v', '0076');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('w', '0077');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('x', '0078');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('y', '0079');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('z', '007A');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('{', null);
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('|', null);
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('}', null);
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('~', null);
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values (' ', '0020');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('\n', '000D');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('\r', '000A');
+
+insert into UNICODE_VALUES (SAMPLE, VALUE)
+values ('?', '00A7');
+COMMIT
+
+--CREATE DECODE FUNCTION
+
+CREATE FUNCTION DECODE_TEXT    ( P_Text  IN VARCHAR2) RETURN VARCHAR2 IS 
+       CURSOR GET_Value(P_String IN VARCHAR2) IS SELECT Sample
+                                                 FROM   Unicode_Values T
+                                                 WHERE  VALUE = P_String; 
+ V_Text_Ready    VARCHAR2(1000);
+ V_Current_Value VARCHAR2(200);
+ BEGIN
+  IF REGEXP_COUNT(UPPER(P_Text), '\U')>1 THEN    
+     V_Text_Ready  := REPLACE(REGEXP_REPLACE(P_Text,'\s{2,}', ' '), '\u', NULL);
+     ---------------
+     FOR i IN 1..REGEXP_COUNT(P_Text, '\u') LOOP
+         OPEN GET_Value(REPLACE(SUBSTR(UPPER(P_Text),INSTR(UPPER(P_Text), 'U',1,i)+1,4),'\U'));
+         FETCH GET_Value INTO  V_Current_Value;
+         CLOSE GET_Value;
+         ---------------
+         V_Text_Ready := REGEXP_REPLACE(V_Text_Ready, REPLACE(SUBSTR(P_Text,INSTR(P_Text, 'u',1,i)+1,4),'\u'), V_Current_Value);
+         ---------------    
+     END LOOP;
+     ---------
+     RETURN (V_Text_Ready);
+     ---------
+  ELSE
+     RETURN (P_Text);
+  END IF;
+  -----------------------
+  EXCEPTION
+    WHEN OTHERS THEN
+      RETURN (NULL);         
+  
+ END DECODE_TEXT;

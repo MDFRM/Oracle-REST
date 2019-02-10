@@ -1,7 +1,0 @@
-say I do have two batch file (C:\1.bat & C:\2.bat) and I want to run them all at once 
- Create run_1_and_2.bat batch file and include inside it :
-	(
-		start C:\1.bat
-    timeout /t 5
-		start C:\2.bat
-	) | exit

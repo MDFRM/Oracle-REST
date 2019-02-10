@@ -1,0 +1,19 @@
+CREATE OR REPLACE FUNCTION PARSE_JSON ( P_Text  IN VARCHAR2,
+                                        P_Field IN VARCHAR2,
+                                        P_Occur IN NUMBER) RETURN VARCHAR2 IS 
+ V_Text_Ready    VARCHAR2(2000);
+ V_Elemnt_Occur  NUMBER :=P_Occur;
+ V_Elemnt_Name   VARCHAR2(100) :=P_Field;
+ V_Elemnt_Value  VARCHAR2(200); 
+BEGIN
+  --------------
+  V_Text_Ready := REGEXP_SUBSTR( P_Text , '{(.*?)\}',1,V_Elemnt_Occur);
+  V_Text_Ready := REGEXP_REPLACE(V_Text_Ready , '({|"|}|\]|\[)+');
+  V_Elemnt_Value := REGEXP_REPLACE(REGEXP_SUBSTR(V_Text_Ready, V_Elemnt_Name||':[^,]+', 1 , 1), V_Elemnt_Name);  
+  --------------
+  RETURN ( REGEXP_REPLACE(V_Elemnt_Value,':'));
+  -------------- 
+  EXCEPTION
+    WHEN OTHERS THEN
+      RETURN (NULL);                       
+ END PARSE_JSON;

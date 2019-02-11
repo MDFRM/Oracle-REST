@@ -1,0 +1,62 @@
+PROCEDURE SYS_PRINT IS
+	V_Plist_Id		  PARAMLIST ;
+	V_TmId          TIMER ;
+	V_Alert_Button	NUMBER(3) ;
+	V_JobIdFull	    VARCHAR2(100) ;
+	V_JobId				  VARCHAR2(100) ;
+	V_Rep_Status    VARCHAR2(100) ;
+	V_NodeId			  REPORT_OBJECT;-- := FIND_REPORT_OBJECT('GLVCHALL');
+	V_Alert         NUMBER ;
+BEGIN
+  -----------------------------------------
+	V_Plist_Id := GET_PARAMETER_LIST('PLIST') ;
+	IF NOT ID_NULL(V_Plist_Id)THEN
+		DESTROY_PARAMETER_LIST('PLIST') ;
+	END IF  ;
+  V_Plist_Id := CREATE_PARAMETER_LIST('PLIST') ;
+ 	-----------------------------------------
+  --Adding parameters to the parameter list
+  -----------------------------------------   
+  V_NodeId := FIND_REPORT_OBJECT('DRCT07'); 
+  -------------------
+  ADD_PARAMETER(V_Plist_Id,'P_Login_Lang_Code' ,TEXT_PARAMETER, :GLOBAL.Login_Lang_Code) ;
+  ADD_PARAMETER(V_Plist_Id,'P_Profile_Id'      ,TEXT_PARAMETER, :GLOBAL.User_Profile_Id) ;
+  ADD_PARAMETER(V_Plist_Id,'P_Organization_Id' ,TEXT_PARAMETER, :CONTROL.Organization_Id) ;  
+  ADD_PARAMETER(V_Plist_Id,'P_Branch_Id'       ,TEXT_PARAMETER, :CONTROL.Branch_Id) ;   
+  ADD_PARAMETER(V_Plist_Id,'P_From_Date'       ,TEXT_PARAMETER, TO_CHAR(:CONTROL.From_Date , 'DD-MM-YYYY')) ;
+  ADD_PARAMETER(V_Plist_Id,'P_Station_Id'      ,TEXT_PARAMETER,'1' );                                                                                         
+  -----------------------------------------
+	-- Setting the system properties
+  -----------------------------------------
+	SET_REPORT_OBJECT_PROPERTY(V_NodeId, REPORT_DESTYPE  , CACHE) ;
+	SET_REPORT_OBJECT_PROPERTY(V_NodeId, REPORT_COMM_MODE, SYNCHRONOUS) ;
+	SET_REPORT_OBJECT_PROPERTY(V_NodeId, REPORT_DESFORMAT, 'PDF') ;
+	SET_REPORT_OBJECT_PROPERTY(V_NodeId, REPORT_SERVER   , :PARAMETER.Rep_Server_Name) ;
+	ADD_PARAMETER(V_Plist_Id, 'ENVID'  , TEXT_PARAMETER  , :GLOBAL.Login_Lang_Code) ;
+  -----------------------------------------
+	V_JobIdFull := RUN_REPORT_OBJECT(V_NodeId, V_Plist_Id) ;
+	-----------------------------------------
+	IF FORM_SUCCESS THEN
+		-----------------------------------------
+		V_JobId := SUBSTR(V_JobIdFull, LENGTH(:PARAMETER.Rep_Server_Name)+2,LENGTH(V_JobIdFull)) ;
+		V_Rep_Status := REPORT_OBJECT_STATUS(V_JobIdFull)  ;
+		-----------------------------------------
+		IF  (V_Rep_Status = 'FINISHED')THEN  
+			WEB.SHOW_DOCUMENT(:PARAMETER.Rep_Server_Host_Name||'/getjobid='||V_JobId||'?server='||:PARAMETER.Rep_Server_Name,'_blank') ;
+		ELSIF V_Rep_Status='TERMINATED_WITH_ERROR' THEN			
+			V_Alert := SYS_DEV.DISPLAY_ALERT('ERROR','SYS-00012', 'Unable To Run The Report') ;						
+		ELSE
+			:PARAMETER.Iterations := 0 ;
+			:GLOBAL.JobIdFull:= V_JobIdFull  ;
+			:GLOBAL.JobId:= V_JobId  ;
+			V_TmId:= FIND_TIMER('REP_TIMER') ;
+			IF ID_NULL(V_TmId) THEN
+				 V_TmId:= CREATE_TIMER('REP_TIMER', :PARAMETER.Rep_Server_Timer_Period, REPEAT) ;
+			END IF ;
+		END IF ;
+		-----------------------------------------
+	ELSE
+		V_Alert := SYS_DEV.DISPLAY_ALERT('ERROR','SYS-00012', 'Unable To Run The Report') ;						
+	END IF ;
+	-----------------------------------------
+END  ;

@@ -1,0 +1,14 @@
+Sending report output to a printer 
+
+rwrun report=test.rdf userid=scott/tiger@mydb desformat=pdf destype=printer desname=myprinter
+http://myias.mycomp.com:7779/reports/rwservlet?server=myrepserv+report=test.rdf+userid=scott/tiger@mydb+desformat=pdf+destype=printer+desname=myprinter
+http://mywebserver.com:7779/cgi-bin/rwcgi.exe?server=myrepserv+report=test.rdf+userid=scott/tiger@mydb+desformat=pdf+destype=printer+desname=myprinter
+rwclient server=myrepserv report=test.rdf userid=scott/tiger@mydb desformat=pdf destype=printer desname=myprinter
+
+
+
+Sending report output to a file 
+rwrun report=test.rdf userid=scott/tiger@mydb desformat=pdf destype=file desname=c:\mydir\test.pdf
+http://myias.mycomp.com:7779/reports/rwservlet?server=myrepserv+report=test.rdf+userid=scott/tiger@mydb+desformat=pdf+destype=file+desname=c:\mydir\test.
+http://mywebserver.com:7779/cgi-bin/rwcgi.exe?server=myrepserv+report=test.rdf+userid=scott/tiger@mydb+desformat=pdf+destype=file+desname=c:\mydir\test
+rwclient server=myrepserv report=test.rdf userid=scott/tiger@mydb desformat=pdf destype=file desname=c:\mydir\test
